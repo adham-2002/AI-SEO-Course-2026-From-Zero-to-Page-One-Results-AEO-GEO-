@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark" data-font-size="md" data-line-width="standard" data-font-style="sans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI SEO Course 2026 — From Zero to Page-One Results (SEO, AEO & GEO)</title>
+  <meta name="description" content="Complete 26-Section Master Guide for AI SEO, AEO & GEO (2026): 244 lectures, actionable workflows, and primary-source technical SEO fact-checks in English and Arabic." />
+  <meta name="theme-color" content="#0B0F17" />
+
+  <!-- Google Fonts: Inter, Plus Jakarta Sans, Newsreader, JetBrains Mono, IBM Plex Sans Arabic, Cairo, Amiri -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Top Reading Scroll Progress Bar -->
+  <div class="scroll-progress-track" aria-hidden="true">
+    <div id="scrollProgressBar" class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Top Sticky Header -->
+  <header class="top-header" role="banner">
+    <div class="header-left">
+      <button id="mobileMenuBtn" class="icon-btn mobile-only" aria-label="Toggle Navigation Sidebar" title="Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <a href="#overview" id="brandLink" class="brand-logo">
+        <span class="brand-icon">🏎️</span>
+        <div class="brand-text">
+          <span class="brand-title" data-i18n="brandTitle">AI SEO 2026</span>
+          <span class="brand-subtitle" data-i18n="brandSubtitle">SEO · AEO · GEO Master Guide</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Center Search Bar Trigger -->
+    <div class="header-center">
+      <button id="openSearchBtn" class="search-trigger-btn" aria-label="Search course">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span class="search-placeholder" data-i18n="searchPlaceholder">Search 26 sections, 244 lectures, prompts & 2026 audits...</span>
+        <kbd class="search-kbd">⌘K</kbd>
+      </button>
+    </div>
+
+    <!-- Right Controls: Progress, Filter, Reader Settings, Theme, Language, GitHub -->
+    <div class="header-right">
+      <!-- Course Completion Pill -->
+      <button id="progressSummaryBtn" class="progress-pill" title="Completed Lectures">
+        <div class="progress-ring-wrap">
+          <svg class="progress-ring" width="22" height="22" viewBox="0 0 24 24">
+            <circle class="progress-ring-bg" cx="12" cy="12" r="9" fill="none" stroke-width="2.5"></circle>
+            <circle id="headerProgressCircle" class="progress-ring-fill" cx="12" cy="12" r="9" fill="none" stroke-width="2.5" stroke-dasharray="56.55" stroke-dashoffset="56.55"></circle>
+          </svg>
+        </div>
+        <span id="headerProgressText" class="progress-pill-text">0 / 244</span>
+      </button>
+
+      <!-- Content Filter Mode -->
+      <div class="filter-mode-group" role="group" aria-label="Content View Mode">
+        <button class="filter-mode-btn active" data-filter="all" data-i18n="filterAll" title="Show full course + 2026 audits">All</button>
+        <button class="filter-mode-btn" data-filter="course" data-i18n="filterCourse" title="Show course lectures only">Lectures</button>
+        <button class="filter-mode-btn" data-filter="audit" data-i18n="filterAudit" title="Show 2026 Practitioner Audits & Fact-Checks only">2026 Audit</button>
+      </div>
+
+      <!-- Typography & Reading Appearance Popover Trigger -->
+      <div class="popover-wrapper">
+        <button id="appearanceBtn" class="icon-btn" aria-label="Reading Settings" title="Typography & Theme Settings">
+          <span class="aa-icon">Aa</span>
+        </button>
+        <div id="appearancePopover" class="settings-popover hidden" role="dialog" aria-label="Reading Preferences">
+          <div class="popover-section">
+            <span class="popover-label" data-i18n="themeLabel">Reading Theme</span>
+            <div class="theme-selector">
+              <button class="theme-option" data-set-theme="light">
+                <span class="theme-swatch swatch-light">☀️</span>
+                <span data-i18n="themeLight">Light</span>
+              </button>
+              <button class="theme-option active" data-set-theme="dark">
+                <span class="theme-swatch swatch-dark">🌙</span>
+                <span data-i18n="themeDark">Dark</span>
+              </button>
+              <button class="theme-option" data-set-theme="sepia">
+                <span class="theme-swatch swatch-sepia">📜</span>
+                <span data-i18n="themeSepia">Sepia</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="popover-section">
+            <span class="popover-label" data-i18n="fontStyleLabel">Typeface</span>
+            <div class="segmented-control">
+              <button class="seg-btn active" data-set-font-style="sans" data-i18n="fontSans">Modern Sans</button>
+              <button class="seg-btn" data-set-font-style="serif" data-i18n="fontSerif">Book Serif</button>
+            </div>
+          </div>
+
+          <div class="popover-section">
+            <span class="popover-label" data-i18n="fontSizeLabel">Font Size</span>
+            <div class="segmented-control">
+              <button class="seg-btn" data-set-font-size="sm">A-</button>
+              <button class="seg-btn active" data-set-font-size="md">A</button>
+              <button class="seg-btn" data-set-font-size="lg">A+</button>
+              <button class="seg-btn" data-set-font-size="xl">A++</button>
+            </div>
+          </div>
+
+          <div class="popover-section">
+            <span class="popover-label" data-i18n="lineWidthLabel">Column Width</span>
+            <div class="segmented-control">
+              <button class="seg-btn active" data-set-line-width="standard" data-i18n="widthFocused">Focused</button>
+              <button class="seg-btn" data-set-line-width="wide" data-i18n="widthWide">Wide</button>
+              <button class="seg-btn" data-set-line-width="full" data-i18n="widthFull">Full</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Theme Cycle Button -->
+      <button id="quickThemeBtn" class="icon-btn" aria-label="Switch Theme" title="Toggle Light / Dark / Sepia">
+        <span id="quickThemeIcon">🌙</span>
+      </button>
+
+      <!-- Language Toggle (EN / AR) -->
+      <button id="langToggleBtn" class="lang-toggle-btn" aria-label="Switch Language" title="Switch between English and Arabic">
+        <span class="lang-flag" id="langFlag">🇸🇦</span>
+        <span class="lang-label" id="langLabel">العربية</span>
+      </button>
+
+      <!-- GitHub Repo Link -->
+      <a href="https://github.com/adham-2002/AI-SEO-Course-2026-From-Zero-to-Page-One-Results-AEO-GEO-" target="_blank" rel="noopener noreferrer" class="icon-btn github-link" aria-label="GitHub Repository" title="View on GitHub">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main 3-Column Editorial Layout -->
+  <div class="layout-shell">
+    <!-- Left Sidebar: Course Sections Navigation -->
+    <aside id="leftSidebar" class="sidebar-left" aria-label="Course Curriculum">
+      <div class="sidebar-header">
+        <div class="sidebar-header-top">
+          <span class="sidebar-heading" data-i18n="curriculumHeading">Course Curriculum</span>
+          <span id="sidebarCompletionBadge" class="sidebar-badge">0%</span>
+        </div>
+        <div class="sidebar-filter-wrap">
+          <input type="text" id="sectionFilterInput" class="sidebar-filter-input" placeholder="Filter sections..." data-i18n-placeholder="filterSectionsPlaceholder" />
+        </div>
+      </div>
+
+      <nav id="sectionNavList" class="section-nav-list" role="navigation">
+        <!-- Populated dynamically by app.js -->
+      </nav>
+
+      <div class="sidebar-footer">
+        <button id="viewAllSectionsBtn" class="sidebar-action-btn" data-i18n="viewAllSections">
+          📖 Read Full Continuous Book
+        </button>
+        <button id="resetProgressBtn" class="sidebar-reset-btn" data-i18n="resetProgress">
+          Reset Progress
+        </button>
+      </div>
+    </aside>
+
+    <!-- Mobile Sidebar Backdrop -->
+    <div id="sidebarBackdrop" class="sidebar-backdrop hidden"></div>
+
+    <!-- Center Column: Optimal Long-Form Reading Area -->
+    <main id="mainContentArea" class="reading-main" role="main">
+      <!-- Resume Reading Banner (shown if user has saved progress) -->
+      <div id="resumeBanner" class="resume-banner hidden">
+        <div class="resume-banner-text">
+          <span class="resume-icon">🔖</span>
+          <span id="resumeBannerLabel">Continue where you left off</span>
+        </div>
+        <div class="resume-banner-actions">
+          <button id="resumeJumpBtn" class="btn-primary-sm" data-i18n="resumeBtn">Resume</button>
+          <button id="resumeDismissBtn" class="btn-ghost-sm" aria-label="Dismiss">✕</button>
+        </div>
+      </div>
+
+      <!-- Dynamic Chapter Container -->
+      <article id="articleContainer" class="editorial-article">
+        <!-- Rendered by app.js -->
+      </article>
+
+      <!-- Bottom Chapter Pagination (Prev / Next) -->
+      <nav id="chapterPagination" class="chapter-pagination" aria-label="Chapter Pagination">
+        <!-- Rendered by app.js -->
+      </nav>
+
+      <!-- Editorial Footer -->
+      <footer class="reading-footer">
+        <div class="footer-inner">
+          <p data-i18n="footerNote">
+            🏎️ AI SEO Course 2026: From Zero to Page-One Results (SEO, AEO & GEO) — Complete 26-Section Watch-Along & Primary-Source Fact-Check.
+          </p>
+          <div class="footer-links">
+            <a href="#top" id="backToTopLink" data-i18n="backToTop">↑ Back to top</a>
+            <span>·</span>
+            <a href="https://github.com/adham-2002/AI-SEO-Course-2026-From-Zero-to-Page-One-Results-AEO-GEO-" target="_blank" rel="noopener">GitHub Repository</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Right Sidebar: "On This Page" Mini-TOC & Section Progress -->
+    <aside id="rightSidebar" class="sidebar-right" aria-label="On This Page">
+      <div class="toc-sticky-box">
+        <div class="toc-header">
+          <span class="toc-title" data-i18n="onThisPage">On This Page</span>
+          <span id="sectionLectureCounter" class="toc-counter"></span>
+        </div>
+
+        <!-- Section Mini Progress Bar -->
+        <div id="sectionProgressWrap" class="section-progress-wrap">
+          <div class="section-progress-bar-bg">
+            <div id="sectionProgressBarFill" class="section-progress-bar-fill" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <ul id="pageTocList" class="page-toc-list">
+          <!-- Populated dynamically by app.js -->
+        </ul>
+
+        <!-- Quick Legend Card -->
+        <div class="legend-mini-card">
+          <div class="legend-mini-title" data-i18n="legendTitle">Callout Key</div>
+          <div class="legend-mini-grid">
+            <span>🎬 <small data-i18n="legLecture">Lecture</small></span>
+            <span>💡 <small data-i18n="legTip">Tip</small></span>
+            <span>⚠️ <small data-i18n="legWarn">Warning</small></span>
+            <span>🧠 <small data-i18n="legAnalogy">Analogy</small></span>
+            <span>🛠️ <small data-i18n="legAction">Action</small></span>
+            <span>🔄 <small data-i18n="legAudit">2026 Audit</small></span>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Instant Search Modal (Ctrl+K / ⌘K) -->
+  <div id="searchModal" class="search-modal-backdrop hidden" role="dialog" aria-modal="true" aria-label="Search Course">
+    <div class="search-modal">
+      <div class="search-modal-header">
+        <svg class="search-modal-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="searchModalInput" class="search-modal-input" placeholder="Search lectures, keywords, tools, prompts, or 2026 fact-checks..." autocomplete="off" />
+        <button id="closeSearchModalBtn" class="search-esc-btn">ESC</button>
+      </div>
+      <div class="search-modal-filters">
+        <button class="search-scope-btn active" data-scope="all" data-i18n="searchScopeAll">All Results</button>
+        <button class="search-scope-btn" data-scope="lecture" data-i18n="searchScopeLectures">🎬 Lectures</button>
+        <button class="search-scope-btn" data-scope="audit" data-i18n="searchScopeAudits">🔄 2026 Audits</button>
+        <button class="search-scope-btn" data-scope="prompt" data-i18n="searchScopePrompts">🧪 Prompts & Tools</button>
+      </div>
+      <div id="searchResultsContainer" class="search-results-list">
+        <!-- Populated dynamically -->
+      </div>
+      <div class="search-modal-footer">
+        <span><kbd>↑</kbd> <kbd>↓</kbd> <span data-i18n="searchNavHint">to navigate</span></span>
+        <span><kbd>↵</kbd> <span data-i18n="searchSelectHint">to jump</span></span>
+        <span><kbd>ESC</kbd> <span data-i18n="searchCloseHint">to close</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Precompiled Course Data (EN + AR) -->
+  <script src="assets/data/course-en.js"></script>
+  <script src="assets/data/course-ar.js"></script>
+  <!-- Main Application Script -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

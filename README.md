@@ -4,6 +4,8 @@
 
 **The Complete, Lecture-by-Lecture Master Guide & 2026 Practitioner Fact-Check**
 
+[![Live Reader Website](https://img.shields.io/badge/🌐_Interactive_Reader_App-Launch_Website-10b981?style=for-the-badge)](https://adham-2002.github.io/AI-SEO-Course-2026-From-Zero-to-Page-One-Results-AEO-GEO-/)
+[![Arabic Edition](https://img.shields.io/badge/🇸🇦_النسخة_العربية-README.ar.md-0ea5e9?style=for-the-badge)](./README.ar.md)
 [![Sections](https://img.shields.io/badge/Sections-26_Complete-blue?style=for-the-badge)](#%EF%B8%8F-course-map)
 [![Lectures](https://img.shields.io/badge/Lectures-244_Covered-success?style=for-the-badge)](#%EF%B8%8F-course-map)
 [![Focus](https://img.shields.io/badge/Focus-SEO_%7C_AEO_%7C_GEO-ff6b00?style=for-the-badge)](#section-11--optimizing-content-for-the-ai-era-aeo--geo)
