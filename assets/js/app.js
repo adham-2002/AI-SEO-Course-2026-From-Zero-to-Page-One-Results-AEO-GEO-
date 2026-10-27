@@ -339,15 +339,12 @@
     let currentZoneHtml = '';
 
     while (i < lines.length) {
+      const prevI = i;
       const line = lines[i];
       const trimmed = line.trim();
 
-      // Skip top H1 (already rendered in section hero card) or raw HTML center divs
-      if (i === 0 && /^#\s+/.test(trimmed)) {
-        i++;
-        continue;
-      }
-      if (/^<\/?div/i.test(trimmed) || /^\[!\[/.test(trimmed)) {
+      // Skip top H1 (already rendered in section hero card) or raw HTML center divs / badges
+      if (/^#\s+/.test(trimmed) || /^<\/?div/i.test(trimmed) || /^\[!\[/.test(trimmed)) {
         i++;
         continue;
       }
@@ -374,7 +371,7 @@
           codeLines.push(lines[i]);
           i++;
         }
-        i++; // skip closing ```
+        if (i < lines.length) i++; // skip closing ```
         const rawCode = codeLines.join('\n');
         currentZoneHtml += `
           <div class="code-block-wrapper">
@@ -458,7 +455,7 @@
         continue;
       }
 
-      // H3 & H4 Headings
+      // H3, H4, H5, H6 Headings
       if (/^###\s+/.test(trimmed)) {
         const h3Text = trimmed.replace(/^###\s+/, '');
         const slug = `${section.id}-h3-${i}`;
@@ -466,8 +463,8 @@
         i++;
         continue;
       }
-      if (/^####\s+/.test(trimmed)) {
-        const h4Text = trimmed.replace(/^####\s+/, '');
+      if (/^#{4,6}\s+/.test(trimmed)) {
+        const h4Text = trimmed.replace(/^#{4,6}\s+/, '');
         currentZoneHtml += `<h4>${formatInline(h4Text)}</h4>`;
         i++;
         continue;
@@ -550,9 +547,14 @@
       while (
         i < lines.length &&
         lines[i].trim() &&
-        !/^(#{1,4}\s|```|---|\||>\s?|(\s*)([-*+]|\d+\.)\s+)/.test(lines[i].trim())
+        !/^(#{1,6}\s|```|---|\||>\s?|(\s*)([-*+]|\d+\.)\s+)/.test(lines[i].trim())
       ) {
         paraLines.push(lines[i].trim());
+        i++;
+      }
+      if (paraLines.length === 0) {
+        // Safety guard: if a line started with a special character (e.g. standalone '|') that didn't match a block
+        paraLines.push(trimmed);
         i++;
       }
       const paraText = paraLines.join(' ');
@@ -561,6 +563,11 @@
         currentZoneHtml += `<div class="semantic-callout ${calloutClass}"><p>${formatInline(paraText)}</p></div>`;
       } else {
         currentZoneHtml += `<p>${formatInline(paraText)}</p>`;
+      }
+
+      // Ultimate anti-hang guard
+      if (i === prevI) {
+        i++;
       }
     }
 
